@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Style -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .input-number {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+        input[type="button"] {
+            width: 170px;
+            height: 32px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3468FC;
+            color: #FFF;
+        }
+        input[type="button"]:hover {
+            cursor: pointer;
+            background-color: #2854cd;
+        }
+
+        .result {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .result span {
+            margin-bottom: 10px;
+        }
+
+        .result ul {
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Inputs -->
+        <div class="input-number">
+            <label for="number">Valor da compra (R$):</label>
+            <input type="number" name="second-number" id="number">
+        </div>
+        
+        <!-- Trigger button -->
+        <input type="button" value="Calcular" id="calculateBtn">
+
+        <span class="result"></span>
+
+    </div>
+
+    <!-- Script -->
+    <script src="./main.js"></script>
+</body>
+</html>
