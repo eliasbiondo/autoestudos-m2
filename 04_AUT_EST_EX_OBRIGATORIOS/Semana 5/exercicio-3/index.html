@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Style -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+
+        .input input {
+            width: 300px;
+        }
+
+        input[type="button"] {
+            width: 300px;
+            height: 32px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3468FC;
+            color: #FFF;
+        }
+        input[type="button"]:hover {
+            cursor: pointer;
+            background-color: #2854cd;
+        }
+
+        .result {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .result span {
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Inputs -->
+        <div class="input">
+            <label for="list">Lista com três números separados por vírgulas: </label>
+            <input type="text" name="list" id="list">
+        </div>
+
+        <div class="input">
+            <label for="focus">Valor foco:</label>
+            <input type="number" name="focus" id="focus">
+        </div>
+        
+        <!-- Trigger button -->
+        <input type="button" value="Ordenar e mostrar posição do valor foco" id="calculateBtn">
+
+        <span class="result"></span>
+
+    </div>
+
+    <!-- Script -->
+    <script src="./main.js"></script>
+</body>
+</html>
