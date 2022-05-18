@@ -9,3 +9,7 @@ Minhas entregas estão definidas aqui:
 
 ## Obrigatórios
 <a href="https://github.com/eliasbiondo/autoestudos-m2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%203"> 06/05/2022 - Entrega 1 - Lançamento vertical</a>
+
+<a href="https://github.com/eliasbiondo/autoestudos-m2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%205"> 20/05/2022 - Entrega 2 - Exercícios de programação em Javascript</a>
+
+
