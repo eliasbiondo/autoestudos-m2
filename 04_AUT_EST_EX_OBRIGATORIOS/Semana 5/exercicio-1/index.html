@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Style -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .input-number {
+            display: flex;
+            flex-direction: column;
+        }
+        .radios {
+            margin: 1.5rem 0rem;
+        }
+        input[type="button"] {
+            width: 180px;
+            height: 32px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3468FC;
+            color: #FFF;
+        }
+        input[type="button"]:hover {
+            cursor: pointer;
+            background-color: #2854cd;
+        }
+
+        .result {
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Inputs -->
+        <div class="input-number">
+            <label for="number-1">Primeiro número:</label>
+            <input type="number" name="first-number" id="number-1">
+        </div>
+
+        <div class="input-number">
+            <label for="number-2">Segundo número:</label>
+            <input type="number" name="second-number" id="number-2">
+        </div>
+        
+        <!-- Radio buttons -->
+        <div class="radios">
+
+            <span>Operação desejada:</span>
+        
+            <div class="radio">
+                <input type="radio" name="radio" id="radio-1" operation="sum">
+                <label for="radio-1">Soma</label>
+            </div>
+
+            <div class="radio">
+                <input type="radio" name="radio" id="radio-2" operation="subtraction">
+                <label for="radio-2">Subtração</label>
+            </div>
+
+            <div class="radio">
+                <input type="radio" name="radio" id="radio-3" operation="multiplication">
+                <label for="radio-3">Multiplicação</label>
+            </div>
+
+            <div class="radio">
+                <input type="radio" name="radio" id="radio-4" operation="division">
+                <label for="radio-4">Divisão</label>
+            </div>
+
+            <div class="radio">
+                <input type="radio" name="radio" id="radio-5" operation="integer-division">
+                <label for="radio-5">Divisão inteira</label>
+            </div>
+
+            <div class="radio">
+                <input type="radio" name="radio" id="radio-6" operation="remainder">
+                <label for="radio-6">Resto</label>
+            </div>
+
+        </div>
+        
+        <!-- Trigger button -->
+        <input type="button" value="Calcular" id="calculateBtn">
+
+        <span class="result"></span>
+
+    </div>
+
+    <!-- Script -->
+    <script src="./main.js"></script>
+</body>
+</html>
