@@ -1,0 +1,89 @@
+:root {
+    font-size: 40%
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 10rem 14rem;
+        font-size: 2.4rem;
+        font-weight: 400;
+    }
+
+    .left-header .name {
+        font-weight: 400;
+        font-size: 4.8rem;
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    .left-header .current-job-title {
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+    }
+
+    .right-header .contact-info {
+        text-align: right;
+    }
+
+.main-section {
+    display: flex;
+    margin: 0rem 14rem;
+}
+
+    .aside-content {
+        display: flex;
+        flex-direction: column;
+        width: 38rem;
+    }
+
+    .main-content {
+        margin-left: 10rem;
+    }
+
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        font-weight: 300;
+        font-size: 2.4rem;
+        margin-bottom: 5rem;
+    }
+
+        .box-title {
+            font-size: 3.6rem;
+            font-weight: 600;
+        }
+
+    .professional-experience, .license, .project-name {
+        margin-top: 2.5rem;
+    }
+
+    .job-title, .topic, .project-name {
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.box-content {
+    display: none;
+}
