@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 7 | Autoestudo | Exercício obrigatório | 4</title>
+</head>
+<style>
+    .input-field {
+        margin-bottom: 1rem;
+    }
+
+    fieldset {
+        margin-bottom: 2rem;
+    }
+</style>
+<body>
+
+    <!-- Input field -->
+    <div class="input-field">
+        <label for="number-of-people">Quantidade de pessoas:</label>
+        <input type="number" name="number-of-people" id="number-of-people" placeholder="eg. 30">
+    </div>
+
+    <!-- Period fieldset -->
+    <fieldset>
+        <legend>Período</legend>
+
+        <!-- Input field -->
+        <div class="input-field">
+            <input type="radio" name="period" value="diurno" id="diurno">
+            <label for="diurno">Diurno</label>
+        </div>
+    
+        <!-- Input field -->
+        <div class="input-field">
+            <input type="radio" name="period" value="noturno" id="noturno">
+            <label for="noturno">Noturno</label>
+        </div>
+    </fieldset>
+    
+
+    <!-- Trigger button -->
+    <input type="button" id="trigger-button" value="Calcular">
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
