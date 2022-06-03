@@ -1,19 +1,13 @@
-// Getting all required elements from dom.
-const elements = {
-    triggerButton: document.querySelector("#trigger-button"),
-}
+// Instacing calc function.
+function calc() {
 
-// Adding a click event listener to the trigger button.
-elements.triggerButton.addEventListener("click", function() {
     // Getting all required input elements from dom.
-    elements.quantityOfPeople = document.querySelector("#number-of-people");
-    elements.selectedRadio = document.querySelector("input[type='radio'][name='period']:checked");
-
-    // Setting up the quantity of people.
-    const quantityOfPeople = elements.quantityOfPeople.value;
+    const quantityOfPeople = document.querySelector("#quantity-of-people").value;
+    const selectedRadio = document.querySelector("input[type='radio'][name='period']:checked").value;
+    const resultLabel = document.querySelector("#result");
 
     // Checking if is daytime or nighttime.
-    const isDayTime = elements.selectedRadio.value == 'diurno' ? true : false;
+    const isDayTime = selectedRadio == 'diurno' ? true : false;
 
     // Setting the value per person according to the selected period.
     let valuePerPerson = isDayTime ? 200 : 100;
@@ -26,10 +20,7 @@ elements.triggerButton.addEventListener("click", function() {
     // Calculating the total.
     const total = valuePerPerson * quantityOfPeople;
 
-    // Instacing the user's feedback paragraph.
-    const p = document.createElement("p");
-    p.textContent = `Dado que a quantidade de pessoas é ${quantityOfPeople} e o período escolhido é ${isDayTime ? 'diurno' : 'noturno'}, o total é de R$${total}.`;
+    // Printing the result on the screen.
+    resultLabel.innerHTML = `Dado que a quantidade de pessoas é ${quantityOfPeople} e o período escolhido é ${isDayTime ? 'diurno' : 'noturno'}, o total é de <b>R$${total}</b>.`;
 
-    // Appending the response to the body.
-    document.body.appendChild(p);
-})
+}

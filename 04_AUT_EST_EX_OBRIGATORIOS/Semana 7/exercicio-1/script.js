@@ -1,17 +1,23 @@
-// Instacing all required elements from dom.
-const elements = {
-    input: document.querySelector("#input-number"),
-    controls: {
-        add: document.querySelector("input[type='button'][value='-']"),
-        remove: document.querySelector("input[type='button'][value='+']"),
-    }
-}
+// Getting all required elements from dom.
+const numberInput = document.querySelector("input[type='number']");
+const buttonsInput = document.querySelectorAll("input[type='button']");
 
-// Taking all the control elements...
-Object.values(elements.controls).forEach(control => {
-    // Adding an event listener in all application controls.
-    control.addEventListener("click", function() {
-        // Summing or subtracting according to the control button value.
-        elements.input.value = control.value == '+' ?  parseInt(elements.input.value) + 1 : parseInt(elements.input.value) - 1;
+// Instacing an event listener to number input.
+numberInput.addEventListener("input", function() {
+    // For each button input, allowing or blocking the button click depending on number input length.
+    buttonsInput.forEach(button => {
+        numberInput.value.length > 0 ? button.disabled = false : button.disabled = true;
     })
 })
+
+// Instacing the addOne function.
+function addOne() {
+    // Adding one unity to the quantity.
+    numberInput.value = parseInt(numberInput.value) + 1;
+}
+
+// Instacing the removeOne function.
+function removeOne() {
+    // Removing one unity from quantity since its quantity is not less than zero.
+    numberInput.value > 0 ? numberInput.value -= 1 : numberInput.value = 0;
+}

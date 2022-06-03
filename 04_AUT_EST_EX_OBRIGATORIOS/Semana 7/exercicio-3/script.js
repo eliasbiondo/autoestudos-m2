@@ -1,26 +1,22 @@
-// Getting all required elements fromd dom.
-const elements = {
-    triggerButton: document.querySelector("#validate"),
-}
+// Getting all required elements from dom.
+const textInput = document.querySelector("input[type='text']");
+const buttonInput = document.querySelector("input[type='button']");
+const resultLabel = document.querySelector("#result");
 
-// Adding a click event listener on trigger button.
-elements.triggerButton.addEventListener("click", function() {
-    // Getting the telephone input from dom.
-    elements.telephoneInput = document.querySelector("#telephone");
-
-    // Checking if the telephone input value is in the correct format using regEx.
-    const isTelephoneNumberInTheCorrectFormat = /^\([1-9]{2}\)(?:[2-8]|[1-9][1-9])[0-9]{3}\-[0-9]{4}$/g.test(elements.telephoneInput.value);
-
-    // Instacing the user feedback paragraph.
-    const p = document.createElement("p");
-
-    // Setting the paragraph text content according to the test response.
-    if(isTelephoneNumberInTheCorrectFormat) {
-        p.textContent = `O número de telefone ${elements.telephoneInput.value} está em um formato CORRETO!`
-    } else {
-        p.textContent = `O número de telefone ${elements.telephoneInput.value} está em um formato INCORRETO! Utilize (XX)XXXXX-XXXX`
-    }
-
-    // Appending the paragraph to the document body.
-    document.body.appendChild(p);
+// Instacing an event listener to text input.
+textInput.addEventListener("input", function() {
+    // Allowing or blocking the button click depending on text input length.
+    textInput.value.length > 0 ? buttonInput.disabled = false : buttonInput.disabled = true;
 })
+
+// Instacing the telephone validator function.
+function telephoneValidator() {
+    // Validating telephone.
+    const isTelephoneNumberInTheCorrectFormat = /^\([1-9]{2}\)(?:[2-8]|[1-9][1-9])[0-9]{3}\-[0-9]{4}$/g.test(textInput.value);
+
+    // Printing the result on the screen.
+    resultLabel.innerHTML = `
+        <div class="circle ${isTelephoneNumberInTheCorrectFormat ? 'valid' : 'invalid'}"></div>
+        <span>Formato ${isTelephoneNumberInTheCorrectFormat ? 'correto' : 'incorreto'}</span>
+    `
+}

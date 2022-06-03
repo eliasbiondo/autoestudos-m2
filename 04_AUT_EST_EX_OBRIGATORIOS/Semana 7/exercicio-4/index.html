@@ -1,51 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semana 7 | Autoestudo | Exercício obrigatório | 4</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Exercício 4 | Autoestudo de entrega obrigatória | Semana 7</title>
 </head>
 <style>
-    .input-field {
-        margin-bottom: 1rem;
+    :root {
+        font-size: 62.5%;
     }
 
-    fieldset {
-        margin-bottom: 2rem;
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        list-style-type: none;
+        box-sizing: border-box;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        width: 30%;
+    }
+
+    input {
+        margin-bottom: 1.5rem;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        height: 5vh;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ced4da;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        height: 5vh;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #0062cc;
+        color: #fff;
+        background-color: #007bff;
+        cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+        background-color: #0069d9;
+    }
+
+    input[type="button"]:disabled {
+        cursor: not-allowed;
+    }
+
+    .input-field * {
+        cursor: pointer;
     }
 </style>
 <body>
+    <div class="container">
 
-    <!-- Input field -->
-    <div class="input-field">
-        <label for="number-of-people">Quantidade de pessoas:</label>
-        <input type="number" name="number-of-people" id="number-of-people" placeholder="eg. 30">
+        <input type="number" name="quantity-of-people" id="quantity-of-people" placeholder="Digite uma quantidade de pessoas...">
+        
+        <div class="input-field">
+            <input type="radio" name="period" id="diurno" value="diurno">
+            <label for="diurno">Período diurno</label>
+        </div>
+
+        <div class="input-field">
+            <input type="radio" name="period" id="noturno" value="noturno">
+            <label for="noturno">Período noturno</label>
+        </div>
+
+        <input type="button" name="calc" id="calc" value="Calcular" onclick="calc()">
+
+        <span id="result" style="font-size:2rem;"></span>
+
     </div>
-
-    <!-- Period fieldset -->
-    <fieldset>
-        <legend>Período</legend>
-
-        <!-- Input field -->
-        <div class="input-field">
-            <input type="radio" name="period" value="diurno" id="diurno">
-            <label for="diurno">Diurno</label>
-        </div>
-    
-        <!-- Input field -->
-        <div class="input-field">
-            <input type="radio" name="period" value="noturno" id="noturno">
-            <label for="noturno">Noturno</label>
-        </div>
-    </fieldset>
-    
-
-    <!-- Trigger button -->
-    <input type="button" id="trigger-button" value="Calcular">
-
-    <!-- Script -->
     <script src="script.js"></script>
-
 </body>
 </html>

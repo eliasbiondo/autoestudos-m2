@@ -1,17 +1,14 @@
 // Getting all required elements from dom.
-const elements = {
-    triggerButton: document.querySelector("#trigger-button"),
+const textInputs = document.querySelectorAll("input[type='text']");
+
+// Instacing swap text function.
+function swapText() {
+    // Saving the first text input value.
+    let aux = textInputs[0].value;
+
+    // Assigning the first text input value as the second text input value.
+    textInputs[0].value = textInputs[1].value;
+
+    // Assigning the second text input value as the saved value.
+    textInputs[1].value = aux; 
 }
-
-// Adding a click event listener on trigger button.
-elements.triggerButton.addEventListener("click", function() {
-    // Getting all input fields from dom.
-    elements.fields = document.querySelectorAll(".input-field input[type='text']");
-
-    // Saving the current value of first input before swapping.
-    const aux = elements.fields[0].value; 
-
-    // Swipping the input values...
-    elements.fields[0].value = elements.fields[1].value;
-    elements.fields[1].value = aux;
-})
