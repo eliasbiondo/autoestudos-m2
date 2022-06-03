@@ -11,6 +11,9 @@ Minhas entregas estão definidas aqui:
 
 <a href="https://github.com/eliasbiondo/autoestudos-m2/tree/main/03_AUT_EST_ENTREGA/Semana%206"> 27/05/2022 - Entrega 5 - Currículo com banco de dados e ajax</a>
 
+<a href="https://github.com/eliasbiondo/autoestudos-m2/tree/main/03_AUT_EST_ENTREGA/Semana%207"> 03/06/2022 - Entrega 6 - Currículo com suporte à API e operações create, read, update e delete para experiências profissionais</a>
+
+
 ## Obrigatórios
 <a href="https://github.com/eliasbiondo/autoestudos-m2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%203"> 06/05/2022 - Entrega 1 - Lançamento vertical - Semana 3</a>
 
