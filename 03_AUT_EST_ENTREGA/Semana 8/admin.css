@@ -1,0 +1,123 @@
+:root {
+    font-size: 40%
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+body .add-new-experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .add-new-experience > span, body #professional-experiences > span {
+    font-size: 4.8rem;
+}
+
+form {
+    width: 100rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.input-field:first-of-type {
+    margin-top: 3rem;
+}
+
+.input-field label {
+    font-size: 2.4rem;
+}
+
+.input-field input {
+    height: 5.4rem;
+    border-radius: 1rem;
+    background-color: #E0E7EC;
+    outline: none;
+    border: none;
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+button[type="button"] {
+    height: 5.4rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #3468FC;
+    color: #FFF;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #2852c6;
+}
+
+#professional-experiences {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#professional-experiences * {
+    font-size: 2.4rem;
+}
+
+.professional-experience, .license, .project-name {
+    margin-top: 2.5rem;
+}
+
+.job-title, .topic, .project-name {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.professional-experience {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.professional-experience .actions img {
+    width: 3.6rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.container {
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+}
