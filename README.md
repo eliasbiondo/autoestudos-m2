@@ -21,3 +21,6 @@ Minhas entregas estão definidas aqui:
 <a href="https://github.com/eliasbiondo/autoestudos-m2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%205"> 20/05/2022 - Entrega 2 - Exercícios de programação em Javascript - Semana 5</a>
 
 <a href="https://github.com/eliasbiondo/autoestudos-m2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%207">03/06/2022 - Entrega 3 - Resolução de problemas com algoritmos - Semana 7</a>
+
+<a href="https://github.com/eliasbiondo/autoestudos-m2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%209">17/06/2022 - Entrega 4 - Resolução de problemas com algoritmos - Semana 9</a>
+
