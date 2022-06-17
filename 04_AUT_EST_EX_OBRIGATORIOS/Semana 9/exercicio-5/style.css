@@ -1,0 +1,69 @@
+:root {
+    font-family: 'Nunito', sans-serif;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 30%;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-field label {
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.form-field input {
+    height: 5.4rem;
+    border-radius: 1rem;
+    background-color: #E0E7EC;
+    padding: 0rem 1.4rem 0rem 1.4rem;
+}
+
+.primary-button {
+    width: 100%;
+    color: #FFF;
+    height: 5.4rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: #3468FC;
+    margin-bottom: 2rem;
+}
+
+.primary-button:hover {
+    background-color: #2b56cc;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+}
