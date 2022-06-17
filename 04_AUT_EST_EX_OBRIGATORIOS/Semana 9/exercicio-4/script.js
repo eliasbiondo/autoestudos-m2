@@ -1,42 +1,30 @@
-const intervaloBaixo = document.querySelector("#n1");
-const intervaloAlto = document.querySelector("#n2");
+const input = document.querySelector("#n");
 const button = document.querySelector("#button");
 const result = document.querySelector("#result");
 
-function isPrime(n) {
-    for(let i=2; i<n; i++) {
-        if(n % i == 0) {
-            return false;
-        }
+function fibonacci(n) {
+    if (n <= 2) {
+        return 1;
+    } else {
+        return fibonacci(n-1) + fibonacci(n-2);
     }
-
-    return true;
 }
 
-function calc(min, max) {
+function calc(n) {
     
-    let primes = [];
-    let currentLoop = min;
-    let loopMaxSize = max;
+    let arr = [];
 
-    while(currentLoop <= loopMaxSize) {
-
-        if(isPrime(currentLoop)) {
-            primes.push(currentLoop);
-        }
-
-        currentLoop++;
-
+    for(let i = 1; i <= n; i++) {
+        arr.push(fibonacci(i));
     }
-    
-    return primes;
+
+    return arr;
 
 }
 
 button.addEventListener("click", function() {
 
-    const primes = calc(intervaloBaixo.value, intervaloAlto.value);
+    const res = calc(parseInt(input.value));
 
-    result.innerHTML = "Os números primos, presentes dentro do intervalo digitado, são: " + primes + ".";
-    
+    result.innerHTML = "A sequência fibonacci até o n-ésimo termo digitado é " + res + ".";
 })
